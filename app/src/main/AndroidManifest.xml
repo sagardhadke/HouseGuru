@@ -13,17 +13,16 @@
         android:theme="@style/Theme.HouseGuru"
         tools:targetApi="31" >
         <activity
-            android:name=".Bottom"
-            android:exported="false"
-            android:label="@string/title_activity_bottom" />
-        <activity
             android:name=".Booking"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
             android:exported="false" />
         <activity
             android:name=".Wallet"
             android:exported="false" />
         <activity
-            android:name=".Services"
+            android:name=".Service"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
