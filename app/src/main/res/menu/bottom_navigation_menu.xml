@@ -7,19 +7,19 @@
         android:icon="@drawable/baseline_home_24"/>
 
     <item
-        android:id="@+id/service"
+        android:id="@+id/Service"
         android:enabled="true"
         android:title="Service"
         android:icon="@drawable/service_vector"/>
 
     <item
-        android:id="@+id/wallet"
+        android:id="@+id/Wallet"
         android:enabled="true"
         android:title="Wallet"
         android:icon="@drawable/baseline_account_balance_wallet_24"/>
 
     <item
-        android:id="@+id/booking"
+        android:id="@+id/Booking"
         android:enabled="true"
         android:title="Booking"
         android:icon="@drawable/booking"/>
