@@ -2,10 +2,18 @@ package net.uniquecomputer.houseguru
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import net.uniquecomputer.houseguru.databinding.ActivityDateandTimeBinding
 
 class DateandTime : AppCompatActivity() {
+
+    private lateinit var binding: ActivityDateandTimeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dateand_time)
+        binding = ActivityDateandTimeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+
+
     }
 }
