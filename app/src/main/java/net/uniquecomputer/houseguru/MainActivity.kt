@@ -3,6 +3,7 @@ package net.uniquecomputer.houseguru
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.home -> {
                     replaceFragment(Home())
+                    Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show()
                 }
                 R.id.Service -> {
                     replaceFragment(Service())
