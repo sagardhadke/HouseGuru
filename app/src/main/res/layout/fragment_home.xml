@@ -36,13 +36,16 @@
         android:id="@+id/searchbar"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/search_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/avtar" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

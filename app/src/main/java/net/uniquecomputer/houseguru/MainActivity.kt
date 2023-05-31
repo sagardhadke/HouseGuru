@@ -1,12 +1,10 @@
 package net.uniquecomputer.houseguru
 
-import android.content.Intent
+import  android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import net.uniquecomputer.houseguru.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
