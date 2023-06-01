@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
+import net.uniquecomputer.houseguru.Adapter.CleaningServicesAdapter
 import net.uniquecomputer.houseguru.Adapter.HomeApplianceServiceAdapter
 import net.uniquecomputer.houseguru.Adapter.HomeMaintenanceAdapter
 import net.uniquecomputer.houseguru.Adapter.HouseShiftingAdapter
 import net.uniquecomputer.houseguru.Adapter.MostUseAdapter
+import net.uniquecomputer.houseguru.Model.CleaningServicesModel
 import net.uniquecomputer.houseguru.Model.HomeApplianceServiceModel
 import net.uniquecomputer.houseguru.Model.HomeMaintenceModel
 import net.uniquecomputer.houseguru.Model.HouseShiftingModel
@@ -27,6 +29,9 @@ class Service : Fragment() {
 
     private lateinit var homeApplianceServiceAdapter: HomeApplianceServiceAdapter
     private lateinit var homeApplianceServiceArrayList: ArrayList<HomeApplianceServiceModel>
+
+    private lateinit var cleaningServicesAdapter: CleaningServicesAdapter
+    private lateinit var cleaningServicesArrayList: ArrayList<CleaningServicesModel>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,6 +67,16 @@ class Service : Fragment() {
         homeApplianceServiceAdapter = HomeApplianceServiceAdapter(requireContext(),homeApplianceServiceArrayList)
         binding.homeapplianceservice.layoutManager = GridLayoutManager(requireContext(),3)
         binding.homeapplianceservice.adapter = homeApplianceServiceAdapter
+
+        cleaningServicesArrayList = ArrayList()
+        cleaningServicesArrayList.add(CleaningServicesModel(R.drawable.deepcleaning,"Deep \n Cleaning"))
+        cleaningServicesArrayList.add(CleaningServicesModel(R.drawable.kitchencleaning,"Kitchen \n Cleaning"))
+        cleaningServicesArrayList.add(CleaningServicesModel(R.drawable.homesanitizing,"Home \n Sanitizing"))
+        cleaningServicesArrayList.add(CleaningServicesModel(R.drawable.cardetailing,"Car \n Detailing"))
+        cleaningServicesArrayList.add(CleaningServicesModel(R.drawable.carsanitizing,"Car \n Sanitizing"))
+        cleaningServicesAdapter = CleaningServicesAdapter(requireContext(),cleaningServicesArrayList)
+        binding.cleaningservices.layoutManager = GridLayoutManager(requireContext(),3)
+        binding.cleaningservices.adapter = cleaningServicesAdapter
 
         homeMaintenanceAdapter = HomeMaintenanceAdapter(requireContext(),homeMaintenanceArrayList)
         binding.homemaintenance.layoutManager = GridLayoutManager(requireContext(),3)
