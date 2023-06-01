@@ -41,7 +41,6 @@ class Home : Fragment() {
         mostusedarraylist.add(MostUseModel(R.drawable.electrication,"Electrician"))
 
         mostUseAdapter = MostUseAdapter(requireContext(),mostusedarraylist)
-        //grid view 3 column
         binding.mostusehomerv.layoutManager = GridLayoutManager(requireContext(),3)
 //        binding.mostusehomerv.layoutManager = LinearLayoutManager(requireContext())
         binding.mostusehomerv.adapter = mostUseAdapter

@@ -10,7 +10,6 @@ import net.uniquecomputer.houseguru.databinding.SampledataBinding
 
 class HomeMaintenanceAdapter (private val context: Context, private val homeMaintenanceArrayList: ArrayList<HomeMaintenceModel>): RecyclerView.Adapter<HomeMaintenanceAdapter.ViewHolder>(){
 
-
     inner class ViewHolder(val binding: SampledataBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
