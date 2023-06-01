@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import net.uniquecomputer.houseguru.Adapter.MostUseAdapter
 import net.uniquecomputer.houseguru.Model.MostUseModel
 import net.uniquecomputer.houseguru.databinding.FragmentHomeBinding
+import org.imaginativeworld.whynotimagecarousel.ImageCarousel
+import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 class Home : Fragment() {
 
@@ -26,30 +28,40 @@ class Home : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(layoutInflater,container,false)
         mostusedarraylist = ArrayList()
-        mostusedarraylist.add(MostUseModel(R.drawable.houseguru,"App Logo"))
-        mostusedarraylist.add(MostUseModel(R.drawable.avtar,"Avtar"))
-        mostusedarraylist.add(MostUseModel(R.drawable.cleaning,"Home \n Cleaning "))
-        mostusedarraylist.add(MostUseModel(R.drawable.avtar,"Avtar"))
-        mostusedarraylist.add(MostUseModel(R.drawable.cleaning,"Home \n Cleaning "))
-        mostusedarraylist.add(MostUseModel(R.drawable.avtar,"Avtar"))
-        mostusedarraylist.add(MostUseModel(R.drawable.cleaning,"Home \n Cleaning "))
-        mostusedarraylist.add(MostUseModel(R.drawable.avtar,"Avtar"))
-        mostusedarraylist.add(MostUseModel(R.drawable.cleaning,"Home \n Cleaning "))
-        mostusedarraylist.add(MostUseModel(R.drawable.avtar,"Avtar"))
-        mostusedarraylist.add(MostUseModel(R.drawable.cleaning,"Home \n Cleaning "))
+        mostusedarraylist.add(MostUseModel(R.drawable.deepcleaning,"Deep \n Cleaning"))
+        mostusedarraylist.add(MostUseModel(R.drawable.kitchencleaning,"Kitchen \n Cleaning"))
+        mostusedarraylist.add(MostUseModel(R.drawable.homesanitizing,"Home \n Sanitizing"))
+        mostusedarraylist.add(MostUseModel(R.drawable.painting,"Painting"))
+        mostusedarraylist.add(MostUseModel(R.drawable.floorpolisher,"Floor \n Polishing"))
+        mostusedarraylist.add(MostUseModel(R.drawable.plumber,"Plumber"))
+        mostusedarraylist.add(MostUseModel(R.drawable.homeshifting,"Home \n Shifting"))
+        mostusedarraylist.add(MostUseModel(R.drawable.washingmachine,"Washing \n Machine"))
+        mostusedarraylist.add(MostUseModel(R.drawable.carpenter,"Carpender"))
+        mostusedarraylist.add(MostUseModel(R.drawable.fridge,"Fridge"))
+        mostusedarraylist.add(MostUseModel(R.drawable.electrication,"Electrician"))
 
         mostUseAdapter = MostUseAdapter(requireContext(),mostusedarraylist)
         //grid view 3 column
         binding.mostusehomerv.layoutManager = GridLayoutManager(requireContext(),3)
 //        binding.mostusehomerv.layoutManager = LinearLayoutManager(requireContext())
         binding.mostusehomerv.adapter = mostUseAdapter
+        showsliderimage()
         return binding.root
 
     }
 
+    private fun showsliderimage() {
+        val carousel: ImageCarousel = binding.carousel
 
+        carousel.addData(CarouselItem("https://t4.ftcdn.net/jpg/05/20/15/39/360_F_520153905_DpORx6OLESlfvdEBzHFMeDbnm8kxt67t.jpg"))
+        carousel.addData(CarouselItem("https://www.netmeds.com/images/cms/offers/1603970376_Mobile_home_bannerfdhfhf.jpg"))
+        carousel.addData(CarouselItem(R.drawable.sliderone))
+        carousel.addData(CarouselItem(R.drawable.slidertwo))
+        carousel.addData(CarouselItem(R.drawable.sliderthree))
+        carousel.addData(CarouselItem(R.drawable.slidertwo))
+        carousel.addData(CarouselItem(R.drawable.sliderfive))
 
-
+    }
 
 
 }
