@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
+import net.uniquecomputer.houseguru.Adapter.HomeApplianceServiceAdapter
 import net.uniquecomputer.houseguru.Adapter.HomeMaintenanceAdapter
 import net.uniquecomputer.houseguru.Adapter.HouseShiftingAdapter
 import net.uniquecomputer.houseguru.Adapter.MostUseAdapter
+import net.uniquecomputer.houseguru.Model.HomeApplianceServiceModel
 import net.uniquecomputer.houseguru.Model.HomeMaintenceModel
 import net.uniquecomputer.houseguru.Model.HouseShiftingModel
 import net.uniquecomputer.houseguru.databinding.FragmentServiceBinding
@@ -16,10 +18,15 @@ import net.uniquecomputer.houseguru.databinding.FragmentServiceBinding
 class Service : Fragment() {
 
     private lateinit var  binding : FragmentServiceBinding
+
+    lateinit var homeMaintenanceAdapter: HomeMaintenanceAdapter
     private lateinit var homeMaintenanceArrayList : ArrayList<HomeMaintenceModel>
+
     private lateinit var houseShiftingAdapter: HouseShiftingAdapter
     private lateinit var houseShiftingArrayList: ArrayList<HouseShiftingModel>
-     lateinit var homeMaintenanceAdapter: HomeMaintenanceAdapter
+
+    private lateinit var homeApplianceServiceAdapter: HomeApplianceServiceAdapter
+    private lateinit var homeApplianceServiceArrayList: ArrayList<HomeApplianceServiceModel>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +53,15 @@ class Service : Fragment() {
         binding.houseshifting.layoutManager = GridLayoutManager(requireContext(),3)
         binding.houseshifting.adapter = houseShiftingAdapter
 
+
+        homeApplianceServiceArrayList = ArrayList()
+        homeApplianceServiceArrayList.add(HomeApplianceServiceModel(R.drawable.fridge,"Fridge"))
+        homeApplianceServiceArrayList.add(HomeApplianceServiceModel(R.drawable.acservice,"Ac Service"))
+        homeApplianceServiceArrayList.add(HomeApplianceServiceModel(R.drawable.washingmachine,"Washing \n Machine"))
+        homeApplianceServiceArrayList.add(HomeApplianceServiceModel(R.drawable.television,"Television"))
+        homeApplianceServiceAdapter = HomeApplianceServiceAdapter(requireContext(),homeApplianceServiceArrayList)
+        binding.homeapplianceservice.layoutManager = GridLayoutManager(requireContext(),3)
+        binding.homeapplianceservice.adapter = homeApplianceServiceAdapter
 
         homeMaintenanceAdapter = HomeMaintenanceAdapter(requireContext(),homeMaintenanceArrayList)
         binding.homemaintenance.layoutManager = GridLayoutManager(requireContext(),3)
