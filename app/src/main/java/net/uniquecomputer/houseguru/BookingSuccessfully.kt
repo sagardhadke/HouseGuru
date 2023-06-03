@@ -1,8 +1,9 @@
 package net.uniquecomputer.houseguru
-
 import android.content.Intent
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.app.ActivityCompat
 import net.uniquecomputer.houseguru.databinding.ActivityBookingSuccessfullyBinding
 
 class BookingSuccessfully : AppCompatActivity() {
@@ -12,7 +13,6 @@ class BookingSuccessfully : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityBookingSuccessfullyBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         supportActionBar?.show()
         val title = intent.getStringExtra("title")
@@ -25,6 +25,7 @@ class BookingSuccessfully : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             finishAffinity()
             startActivity(intent)
+
         }
 
     }

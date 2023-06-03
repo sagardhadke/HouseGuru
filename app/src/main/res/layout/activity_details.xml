@@ -135,6 +135,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:hint="Number"
             app:boxBackgroundMode="outline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -145,8 +146,8 @@
                 android:id="@+id/number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="+91 0123456789"
-                android:inputType="number" />
+                android:inputType="number"
+                android:maxLength="10" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
