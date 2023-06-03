@@ -16,6 +16,9 @@
         android:theme="@style/Theme.HouseGuru"
         tools:targetApi="31">
         <activity
+            android:name=".BookingSuccessfully"
+            android:exported="false" />
+        <activity
             android:name=".Detail"
             android:exported="false" />
         <activity

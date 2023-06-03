@@ -8,4 +8,5 @@
     <string name="title_notifications">Notifications</string>
     <string name="description">.   Our Expert Service Provider Will Send Your a \n    Detail Based On Your Specific Cleaning \n    Requirements.</string>
     <string name="description2">.  Please Ensure That You give As Much Detail \n   As Possible To Get Best Quote.</string>
+    <string name="note">You Will Receive an SMS/Email Confirming The\nConfirmation Of Booking</string>
 </resources>

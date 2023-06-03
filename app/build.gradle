@@ -62,6 +62,9 @@ dependencies {
 
     implementation 'org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.1.0'
 
+    //Lottie Animation
+    implementation "com.airbnb.android:lottie:6.0.0"
+
 
 
 
