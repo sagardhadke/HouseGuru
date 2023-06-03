@@ -8,6 +8,14 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="Base.Theme.HouseGuru.ActionBar" parent="Theme.Material3.DayNight">
+        <!-- Customize your light theme here. -->
+        <item name="colorAccent">#0C73EB</item>
+        <item name="colorPrimary">#2196F3</item>
+
+    </style>
+
+
     <style name="Theme.HouseGuru" parent="Base.Theme.HouseGuru" />
 
 

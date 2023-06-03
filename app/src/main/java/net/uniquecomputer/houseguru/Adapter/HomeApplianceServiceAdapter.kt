@@ -1,10 +1,12 @@
 package net.uniquecomputer.houseguru.Adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import net.uniquecomputer.houseguru.Details
 import net.uniquecomputer.houseguru.Model.HomeApplianceServiceModel
 import net.uniquecomputer.houseguru.databinding.SampledataBinding
 
@@ -27,6 +29,10 @@ class HomeApplianceServiceAdapter (private val context: Context, private val hom
         holder.itemView.setOnClickListener {
 
             Toast.makeText(context,"Click", Toast.LENGTH_LONG).show()
+            //open details activity
+            val intent = Intent(context, Details::class.java)
+            intent.putExtra("title",homeApplianceServiceArrayList[position].title)
+            context.startActivity(intent)
 
         }
     }
