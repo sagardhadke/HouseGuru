@@ -21,6 +21,9 @@ class BookingSuccessfully : AppCompatActivity() {
         val data = intent.getStringExtra("title")
         binding.servicename.text = data
 
+        val orderid = intent.getStringExtra("orderid")
+        binding.orderiddetails.text = orderid
+
         binding.done.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             finishAffinity()

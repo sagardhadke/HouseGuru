@@ -33,8 +33,8 @@ class DateandTime : AppCompatActivity() {
                         intent.putExtra("date", date)
                         intent.putExtra("time", time)
                         intent.putExtra("title", title)
-                        finish()
                         startActivity(intent)
+                        finish()
                     }
 
             }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import net.uniquecomputer.houseguru.databinding.ActivityDetailsBinding
+import java.util.UUID
 
 class Details : AppCompatActivity() {
     private lateinit var binding: ActivityDetailsBinding
@@ -18,16 +19,13 @@ class Details : AppCompatActivity() {
         val title = intent.getStringExtra("title")
         supportActionBar?.title = title
 
-        //get the date and time and set in the setdata
         val date = intent.getStringExtra("date")
         val time = intent.getStringExtra("time")
         binding.setdata.text = "Date: $date \nTime: $time"
 
-        //check if setData is null than hide text view
         if (date == null && time == null) {
             binding.setdata.visibility = android.view.View.GONE
         }
-
 
         binding.button.setOnClickListener {
 
@@ -52,11 +50,14 @@ class Details : AppCompatActivity() {
                 Toast.makeText(this, "Number Must Be 10 Character", Toast.LENGTH_SHORT).show()
                 binding.number.requestFocus()
             } else {
+                val orderid = UUID.randomUUID().toString().substring(0, 18)
                 val intent = Intent(this, BookingSuccessfully::class.java)
                 intent.putExtra("title", title)
+                intent.putExtra("orderid", orderid)
                 finish()
                 startActivity(intent)
             }
+
 
         }
 
