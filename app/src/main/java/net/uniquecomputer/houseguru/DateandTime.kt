@@ -20,22 +20,20 @@ class DateandTime : AppCompatActivity() {
         val title = intent.getStringExtra("title")
         supportActionBar?.title = title
 
-
-
         binding.datePicker.setOnDateChangedListener { view, year, monthOfYear, dayOfMonth ->
             val date = "$dayOfMonth/${monthOfYear + 1}/$year"
 
             binding.timePicker.setOnTimeChangedListener { view, hourOfDay, minute ->
                 val time = "$hourOfDay:$minute"
 
-                    binding.continueBtn.setOnClickListener {
-                        val intent = Intent(this, Details::class.java)
-                        intent.putExtra("date", date)
-                        intent.putExtra("time", time)
-                        intent.putExtra("title", title)
-                        startActivity(intent)
-                        finish()
-                    }
+                binding.continueBtn.setOnClickListener {
+                    val intent = Intent(this, Details::class.java)
+                    intent.putExtra("date", date)
+                    intent.putExtra("time", time)
+                    intent.putExtra("title", title)
+                    startActivity(intent)
+                    finish()
+                }
 
             }
 

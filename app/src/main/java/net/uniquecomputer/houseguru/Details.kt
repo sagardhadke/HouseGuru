@@ -25,6 +25,9 @@ class Details : AppCompatActivity() {
 
         if (date == null && time == null) {
             binding.setdata.visibility = android.view.View.GONE
+        }else{
+            (binding.setdata.visibility == android.view.View.VISIBLE)
+            binding.button.text = "Change Date and Time"
         }
 
         binding.button.setOnClickListener {
@@ -57,7 +60,6 @@ class Details : AppCompatActivity() {
                 finish()
                 startActivity(intent)
             }
-
 
         }
 
