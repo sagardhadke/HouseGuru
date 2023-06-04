@@ -32,6 +32,7 @@ class CleaningServicesAdapter (private val context: Context, private val cleanin
             //open details activity
             val intent = Intent(context, Details::class.java)
             intent.putExtra("title",cleaningServicesArrayList[position].title)
+            intent.putExtra("image",cleaningServicesArrayList[position].image)
             context.startActivity(intent)
 
         }

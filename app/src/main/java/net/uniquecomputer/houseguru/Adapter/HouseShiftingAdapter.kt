@@ -32,6 +32,7 @@ class HouseShiftingAdapter (private val context: Context, private val houseShift
             //open details activity
             val intent = Intent(context, Details::class.java)
             intent.putExtra("title",houseShiftingArrayList[position].title)
+            intent.putExtra("image",houseShiftingArrayList[position].image)
             context.startActivity(intent)
 
         }

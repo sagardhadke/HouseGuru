@@ -32,6 +32,7 @@ class HomeMaintenanceAdapter (private val context: Context, private val homeMain
             //open details activity
             val intent = Intent(context, Details::class.java)
             intent.putExtra("title",homeMaintenanceArrayList[position].title)
+            intent.putExtra("image",homeMaintenanceArrayList[position].image)
             context.startActivity(intent)
 
         }

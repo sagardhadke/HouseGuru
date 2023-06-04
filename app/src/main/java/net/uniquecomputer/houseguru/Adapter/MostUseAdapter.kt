@@ -33,6 +33,7 @@ class MostUseAdapter(private val context: Context, private val mostuseArrayList:
             //open details activity
             val intent = Intent(context, Details::class.java)
             intent.putExtra("title",mostuseArrayList[position].title)
+            intent.putExtra("image",mostuseArrayList[position].image)
             context.startActivity(intent)
 
         }

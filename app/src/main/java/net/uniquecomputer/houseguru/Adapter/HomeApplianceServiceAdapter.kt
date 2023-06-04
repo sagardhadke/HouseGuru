@@ -32,6 +32,7 @@ class HomeApplianceServiceAdapter (private val context: Context, private val hom
             //open details activity
             val intent = Intent(context, Details::class.java)
             intent.putExtra("title",homeApplianceServiceArrayList[position].title)
+            intent.putExtra("image",homeApplianceServiceArrayList[position].image)
             context.startActivity(intent)
 
         }
