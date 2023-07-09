@@ -54,8 +54,11 @@ class Details : AppCompatActivity() {
                 binding.number.requestFocus()
             } else {
                 val orderid = UUID.randomUUID().toString().substring(0, 18)
+                val image = intent.getIntExtra("image", 0)
                 val intent = Intent(this, BookingSuccessfully::class.java)
                 intent.putExtra("title", title)
+                intent.putExtra("date", date)
+                intent.putExtra("image", image)
                 intent.putExtra("orderid", orderid)
                 finish()
                 startActivity(intent)

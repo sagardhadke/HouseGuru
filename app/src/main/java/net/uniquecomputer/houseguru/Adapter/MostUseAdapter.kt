@@ -25,7 +25,7 @@ class MostUseAdapter(private val context: Context, private val mostuseArrayList:
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-       holder.binding.sampleimage.setImageResource(mostuseArrayList[position].image)
+        holder.binding.sampleimage.setImageResource(mostuseArrayList[position].image)
         holder.binding.sampletext.text = mostuseArrayList[position].title
         holder.itemView.setOnClickListener {
 
@@ -40,4 +40,3 @@ class MostUseAdapter(private val context: Context, private val mostuseArrayList:
     }
 
 }
-

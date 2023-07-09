@@ -24,8 +24,20 @@ class BookingSuccessfully : AppCompatActivity() {
         val orderid = intent.getStringExtra("orderid")
         binding.orderiddetails.text = orderid
 
+        val date = intent.getStringExtra("date")
+        val image = intent.getIntExtra("image", 0)
+
+
         binding.done.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Booking::class.java)
+            val bundle = Bundle()
+
+            //send data to Booking.kt fragment
+            bundle.putString("title", title)
+            bundle.putString("date", date)
+            bundle.putString("image", image.toString())
+            bundle.putString("orderid", orderid)
+            intent.putExtras(bundle)
             finishAffinity()
             startActivity(intent)
 
